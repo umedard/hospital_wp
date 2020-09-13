@@ -15,7 +15,9 @@
 <body>
 <header>
     <div class="topbar container">
-      <div class="topbar__logo"></div>
+      <div class="topbar__logo">
+        <a class="topbar__url" href="<?php echo home_url(); ?>"></a>
+      </div>
       <div class="topbar__middle">
         <div class="topbar__hotline  topbar__middle-item">
           <p class="topbar__desc topbar__align-right">Infolinia pn-pt 7:30-15:00:</p>
@@ -87,34 +89,16 @@
         </button>
       </div>
     </div>
-    <hr>
-    <nav class="nav container">
-      <ul class="nav__list">
+   
+  <div class="navwrapper"> <?php
+        wp_nav_menu( array( 
+            'theme_location' => 'main-menu-desktop', 
+            'container_class' => 'nav-menu',
+            'menu_class'     => 'nav-menu',
+            'depth'           => 0 )); 
+    ?></div>
+   
 
-        <li class="nav__item">
-          <a class="nav__link" href="#">Nasz szpital</a>
-          <div class="nav__sublist_wrapper">
-            <ul class="nav__sublist">
-              <li class="nav__subitem"><a class="nav__sublink" href="#">Mapa</a></li>
-              <li class="nav__subitem"><a class="nav__sublink" href="#">Dyrekcja</a></li>
-              <li class="nav__subitem"><a class="nav__sublink" href="#">O nas</a></li>
-              <li class="nav__subitem"><a class="nav__sublink" href="#">Jakość</a></li>
-              <li class="nav__subitem"><a class="nav__sublink" href="#">Badania kliniczne</a></li>
-              <li class="nav__subitem"><a class="nav__sublink" href="#">Rzecznik prasowy</a></li>
-              <li class="nav__subitem"><a class="nav__sublink" href="#">Fundusze europejskie</a></li>
-              <li class="nav__subitem"><a class="nav__sublink" href="#">Podziękowania od pacjentów</a></li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="nav__item"><a class="nav__link" href="#">Jednostki</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Strefa pacjenta</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Strefa pracownika</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Strefa kontrahenta</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Usługi komercyjne</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Kariera</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Kontakt</a></li>
-      </ul>
-    </nav>
-    <hr class="nav__hr">
+       
+ 
   </header>

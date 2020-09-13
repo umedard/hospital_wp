@@ -1,6 +1,6 @@
 
-<footer>
-    
+<footer class="wrapper">
+    Footer
 </footer>
 </body>
 
