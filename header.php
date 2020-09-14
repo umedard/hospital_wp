@@ -12,8 +12,17 @@
   <?php wp_head();?>
 </head>
 
-<body>
+<body id="body">
 <header>
+
+<div id="ll">
+<?php get_template_part( 'template-parts/mobilenav', 'page' ); ?>
+</div>
+
+
+
+
+
     <div class="topbar container">
       <div class="topbar__logo">
         <a class="topbar__url" href="<?php echo home_url(); ?>"></a>
@@ -81,11 +90,11 @@
           </a>
 
         </div>
-        <button class=" topbar__button topbar__menu">
+        <button id="menuTrigger" class="topbar__button topbar__menu">
           <p>M</p>
         </button>
-        <button class="topbar__button">
-          <p>X</p>
+        <button id="searchTrigger" class="topbar__button">
+          <p>S</p>
         </button>
       </div>
     </div>
