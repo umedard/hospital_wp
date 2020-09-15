@@ -24,7 +24,7 @@
 
 
     <div class="topbar container">
-      <div class="topbar__logo">
+      <div class="topbar__logo" id="logo">
         <a class="topbar__url" href="<?php echo home_url(); ?>"></a>
       </div>
       <div class="topbar__middle">

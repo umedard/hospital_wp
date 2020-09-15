@@ -1,15 +1,11 @@
 function toggleBasket() {
-    document.querySelector("#menuTrigger").addEventListener("click", () => {
+    const toggle = () => {
       document.querySelector("#mobilemenu").classList.toggle("mobilenav_open");
       document.querySelector("#body").classList.toggle("mobilenav__overflow");
-      console.log(document.querySelector("#mobilemenu"))
-    });
-
-    document.querySelector("#menuClose").addEventListener("click", () => {
-        document.querySelector("#mobilemenu").classList.toggle("mobilenav_open");
-        document.querySelector("#body").classList.toggle("mobilenav__overflow");
-        console.log(document.querySelector("#mobilemenu"))
-      });
+      document.querySelector("#logo").classList.toggle("topbar__logo_main");
+    }
+    document.querySelector("#menuTrigger").addEventListener("click", () => toggle());
+    document.querySelector("#menuClose").addEventListener("click", () => toggle());
   
     // document.addEventListener("click", ({ target }) => {
     //   if (!target.closest(".main")) {
@@ -18,9 +14,9 @@ function toggleBasket() {
     //   }
     // });
   
-    document.querySelector("#mobilemenu2").addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
+    // document.querySelector("#mobilemenu2").addEventListener("click", (e) => {
+    //   e.stopPropagation();
+    // });
    
   }
   

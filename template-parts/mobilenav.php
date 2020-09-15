@@ -1,7 +1,7 @@
 <nav class="mobilenav" id="mobilemenu">
   <div class="mobilenav__menu" id="mobilemenu2">
     <div class="mobilenav__top">
-      <div class="mobilenav__logo">logo </div>
+      <div class="mobilenav__logo"></div>
       <button class="topbar__button mobilenav__close" id="menuClose">X</button>
     </div>
   
