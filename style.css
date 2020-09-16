@@ -853,3 +853,45 @@ div.nav-mobile .children .children {
   border: none;
   padding: .4rem 1.2rem;
 }
+
+.post {
+  margin-top: 28px;
+}
+
+/* post content */
+.post p {
+  padding: 2px 0;
+}
+
+.post__link {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.post__more {
+  text-decoration: none;
+  font-size: .8rem;
+  color: black;
+  display: block;
+}
+
+.screen-reader-text {
+  display: none;
+}
+.nav-links {
+  margin-top: 42.5px;
+}
+
+.search .searchbar {
+  display: flex;
+}
+
+.noresult {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

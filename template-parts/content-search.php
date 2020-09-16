@@ -1,10 +1,7 @@
-<div class="blog-post">
- <?php
-	the_title( '<h2 class="entry-title heading-size-1"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
-    the_excerpt(); 
-?>
+<div class="post">
+    <h2 class="post__header">
+        <?php the_title( '<a class="post__link" href="' . esc_url( get_permalink() ) . '">', '</a>' );?>
+    </h2>
+    <?php  the_excerpt();  ?>
+
 </div>
-
-
-
-<!-- /.blog-post -->

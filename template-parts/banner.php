@@ -7,7 +7,7 @@
                     echo "Wyniki wyszukiwania";
                  } elseif (is_home()) {
                     echo "Szpital Uniwersytecki w Krakowie";
-                 } else {
+                 }  else {
                     the_title();
                  } 
 

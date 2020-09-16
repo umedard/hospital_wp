@@ -7,19 +7,22 @@
       <div class="wrapper__body">
           <?php
       
-      if ( have_posts() ) : while ( have_posts() ) : the_post();
+      if ( have_posts() ) : 
+        while ( have_posts() ) : the_post();
       get_template_part( 'template-parts/content', "search" );
-    endwhile; endif;
+    endwhile; 
+  else: get_template_part( 'template-parts/content', 'noresult' );
+  endif;
+    
     the_posts_pagination( array(
       'mid_size'  => 2,
-      'prev_text' => __( 'Back', 'textdomain' ),
-      'next_text' => __( 'Onward', 'textdomain' ),
+      'prev_text' => __( 'Poprzednie', 'textdomain' ),
+      'next_text' => __( 'Następne', 'textdomain' ),
     ) );
-    next_posts_link(); 
-    previous_posts_link(); 
+  
 		?>
       </div>
- <?php get_template_part( 'template-parts/sidebar', 'page' ); ?>
+          <?php get_template_part( 'template-parts/sidebar', 'page' ); ?>
     </div>
  
 
@@ -27,4 +30,6 @@
 
   </main>
 
-    <?php get_footer(); ?>
+  <?php get_footer(); ?>
+
+  
