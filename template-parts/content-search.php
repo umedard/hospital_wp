@@ -1,16 +1,10 @@
 <div class="blog-post">
-
-	<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
-	<?php the_shortlink() ?>
  <?php
- 
- if ( is_home() ) {
-	 the_title();
-   the_excerpt(); 
-}
-else {
-    the_content();
-}
+	the_title( '<h2 class="entry-title heading-size-1"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
+    the_excerpt(); 
 ?>
+</div>
 
-</div><!-- /.blog-post -->
+
+
+<!-- /.blog-post -->
