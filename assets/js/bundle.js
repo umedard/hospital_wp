@@ -22,6 +22,7 @@ function toggleBasket() {
   function toggleSearch() {
     const toggleMenu = () => {
       document.querySelector("#searchForm").classList.toggle("searchbar_open");
+      document.querySelector("#searchform").focus();
     }
     document.querySelector("#searchTrigger").addEventListener("click", () => toggleMenu());
   }
