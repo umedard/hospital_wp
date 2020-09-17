@@ -95,7 +95,7 @@
         </button>
       </div>
     </div>
-   
+   <hr class="topbar__hr">
   <div class="navwrapper"> <?php
         wp_nav_menu( array( 
             'theme_location' => 'main-menu-desktop', 

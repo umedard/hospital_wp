@@ -434,6 +434,7 @@ main {
 
 div.nav-menu {
   height: 20px;
+  transform: translateY(16px);
 }
 
 div.nav-menu ul {
@@ -474,7 +475,7 @@ div.nav-menu .children {
   top: 0px;
   z-index: 1;
   padding: 20px;
-  margin: 60px auto;
+  margin: 49px auto;
   border-radius: 7px;
   width: 100%;
   box-shadow: -1px 16px 37px -16px rgba(0, 0, 0, 0.75);
@@ -532,7 +533,7 @@ div.nav-menu .children .children {
 }
 
 .pagebanner {
-  margin-top: 17px;
+  margin-top: 61px;
   height: 230px;
   position: relative;
   width: 100%;
@@ -751,9 +752,8 @@ div.nav-mobile .children .children {
 .searchbar {
   height: 20px;
   display: none;
-  align-items: center;
   justify-content: center;
-  padding: 29px 0 27px 0;
+  padding: 29px 0 1px 0;
 }
 
 .searchbar_open {
@@ -864,6 +864,10 @@ div.nav-mobile .children .children {
 }
 
 @media screen and (max-width: 992px) {
+  .topbar__hr {
+    display: none;
+  }
+
   .topbar__middle,
   .topbar__links {
     display: none;
