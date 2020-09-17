@@ -19,10 +19,6 @@
 <?php get_template_part( 'template-parts/mobilenav', 'page' ); ?>
 </div>
 
-
-
-
-
     <div class="topbar container">
       <div class="topbar__logo" id="logo">
         <a class="topbar__url" href="<?php echo home_url(); ?>"></a>

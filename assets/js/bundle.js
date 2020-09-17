@@ -1,9 +1,6 @@
 function toggleBasket() {
   const toggleMenu = () => {
     document.querySelector("#mobilemenu").classList.toggle("mobilenav_open");
-    document
-      .querySelector(".mobilenav__menu")
-      .classList.toggle("mobilenav__menu_open");
     document.querySelector("#body").classList.toggle("mobilenav__overflow");
     document.querySelector("#logo").classList.toggle("topbar__logo_main");
   };
