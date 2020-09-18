@@ -1,5 +1,7 @@
 :root {
   --main-red: #b71e3f;
+  --golden-color: #a17f48;
+  --grey-link: #454545;
 }
 
 html,
@@ -453,7 +455,7 @@ div.nav-menu li {
 }
 
 div.nav-menu a {
-  color: black;
+  color: var(--grey-link);
   text-decoration: none;
   display: block;
 }
@@ -991,16 +993,64 @@ div.nav-mobile .children .children {
 }
 
 .homenews__link {
-  color: black;
+  color: var(--grey-link);
   text-decoration: none;
 }
 
 .homenews__excerpt {
   font-size: 0.7rem;
+  color: var(--grey-link);
 }
 
 .homenews__date {
-  color: goldenrod;
+  color: var(--golden-color);
   padding: 7px 0;
   font-size: 0.7rem;
+}
+
+/* rest of articles */
+
+.homenews__sub {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.homenews__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 105px;
+}
+
+.homenews__center {
+  display: flex;
+  flex-flow: column nowrap;
+
+  justify-content: center;
+}
+
+.homenews__date_sub {
+  flex: 2;
+  align-items: center;
+  color: var(--golden-color);
+}
+
+.homenews__title {
+  flex: 4;
+  color: var(--grey-link);
+}
+
+.homenews__linkwrapper {
+  text-decoration: none;
+  color: black;
+}
+
+.homenews__day {
+  font-size: 40px;
+}
+.homenews__month {
+  font-size: 10px;
+}
+.homenews__year {
+  font-size: 10px;
 }

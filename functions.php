@@ -53,4 +53,13 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 add_theme_support( 'post-thumbnails' );
 
 
+
+function wpb_add_google_fonts() {
+ 
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;700&family=Poppins:wght@300;400;700&display=swap', false ); 
+}
+ 
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+
 ?>
