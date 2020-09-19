@@ -38,6 +38,7 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+// change read more text
 function wpdocs_excerpt_more( $more ) {
   if ( ! is_single() ) {
       $more = sprintf( '<a class="post__more" href="%1$s">%2$s</a>',
@@ -50,16 +51,16 @@ function wpdocs_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
+// support thumbnails
+
 add_theme_support( 'post-thumbnails' );
 
 
-
+// import google fonts
 function wpb_add_google_fonts() {
  
-wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;700&family=Poppins:wght@300;400;700&display=swap', false ); 
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;700&display=swap', false ); 
 }
  
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
-
-
 ?>

@@ -35,7 +35,7 @@ while ( $query1->have_posts() ) {
     }
     
 
-    echo '<div class="homenews__featured"> <div class="homenews__featuredImg">' . $thumbnail . ' </div> ' . 
+    echo '<div class="homenews__featured homenews__border"> <div class="homenews__featuredImg">' . $thumbnail . ' </div> ' . 
     '<div class="homenews__content"> ' . 
 
     $title  . $post_date .  $excerpt .
@@ -62,7 +62,7 @@ wp_reset_postdata();
 
     while ( $query2->have_posts() ) {
         $query2->the_post();
-        echo '<a class="homenews__linkwrapper" href="' . get_the_permalink() . '"><div class="homenews__wrapper"><div class="homenews__date_sub homenews__center">';
+        echo '<a class="homenews__linkwrapper homenews__border" href="' . get_the_permalink() . '"><div class="homenews__wrapper"><div class="homenews__date_sub homenews__center">';
         
             echo '<div class="homenews__day"> ' . get_the_date('d') . '</div>';
             echo '<div class="homenews__month"> ' . get_the_date('F') . '</div>';
