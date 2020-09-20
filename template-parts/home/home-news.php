@@ -49,7 +49,6 @@ wp_reset_postdata();
 
 <div class="homenews__sub">
 
-
 <?php 
 
     $args2 = array( 'category_name' => 'aktualnosci',
@@ -74,9 +73,6 @@ wp_reset_postdata();
         
         '</div></div></a>';
     }
-    
-
-    // d F	Y	
     wp_reset_postdata();
     ?>
 </div>
