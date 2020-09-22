@@ -53,7 +53,7 @@ wp_reset_postdata();
 
     $args2 = array( 'category_name' => 'aktualnosci',
     'post_status' => 'post',
-    'offset' => 0,
+    'offset' => 3,
     'posts_per_page' => 3,
     );
     $query2 = new WP_Query( $args2 );
