@@ -17,5 +17,14 @@
           KRS: 0000024155</div>
         <div class="sidebar__section sidebar__section_header">Nowa Siedziba SU Kraków -Prokocim</div>
         <div class="sidebar__section sidebar__section_text">SP ZOZ Szpital Uniwersytecki w Krakowie</div>
+        
+       
+
+        <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) : ?>
+        <div class="sidebar__section sidebar__section_text">
+               <?php dynamic_sidebar( 'footer-sidebar-2' ); ?>
+        </div>
+         
+        <?php endif; ?>
 
       </section>
