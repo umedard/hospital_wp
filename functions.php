@@ -111,7 +111,7 @@ function medard_book_init() {
  
     register_post_type( 'book', $args );
 }
-add_action( 'init', 'medard_book_init' );
+// add_action( 'init', 'medard_book_init' );
 
 add_action( 'init', 'wpshout_add_taxonomies_to_books' );
 function wpshout_add_taxonomies_to_books() {
@@ -136,6 +136,14 @@ function wpshout_add_custom_post_types_to_query( $query ) {
 	}
 }
 
+function newWidgetInit() {
+  
+  register_sidebar(array(
+    'name' => 'Sidebar',
+    'id' => 'sidebar1'
+  ));
+}
 
+add_action('widgets_init', 'newWidgetInit')
 
 ?>
