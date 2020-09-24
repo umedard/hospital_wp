@@ -168,16 +168,16 @@ add_action('widgets_init', 'multiple_widget_init');
  * 
  */ 
 
-class Foo_Widget extends WP_Widget {
+class HW_Widget extends WP_Widget {
  
     /**
      * Register widget with WordPress.
      */
     public function __construct() {
         parent::__construct(
-            'foo_widget', // Base ID
-            'Foo_Widget', // Name
-            array( 'description' => __( 'A Foo Widget', 'text_domain' ), ) // Args
+            'hw_Widget', // Base ID
+            'HW_Widget', // Name
+            array( 'description' => __( 'HW_Widget', 'text_domain' ), ) // Args
         );
     }
  
@@ -192,10 +192,12 @@ class Foo_Widget extends WP_Widget {
     public function widget( $args, $instance ) {
         extract( $args );
         $title = apply_filters( 'widget_title', $instance['title'] );
+        $title = apply_filters( 'widget_title', $instance['content'] );
  
         echo $before_widget;
         if ( ! empty( $title ) ) {
             echo $before_title . $title . $after_title;
+            echo $before_widget . $title . $after_widget;
         }
         echo __( 'Hello, World!', 'text_domain' );
         echo $after_widget;
@@ -236,7 +238,6 @@ class Foo_Widget extends WP_Widget {
     public function update( $new_instance, $old_instance ) {
         $instance = array();
         $instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
- 
         return $instance;
     }
  
@@ -245,7 +246,7 @@ class Foo_Widget extends WP_Widget {
 add_action( 'widgets_init', 'register_foo' );
      
 function register_foo() { 
-    register_widget( 'Foo_Widget' ); 
+    register_widget( 'HW_Widget' ); 
 }
 
 ?>
