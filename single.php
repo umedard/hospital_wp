@@ -6,8 +6,9 @@
      <?php get_template_part( 'template-parts/banner', 'page' ); ?>
 
     <div class="wrapper wrapper__main">
-      <div class="wrapper__body ">
+      <div <?php post_class( 'wrapper__body'); ?>>
           <?php the_category( '> ' ); ?>
+             <p><?php wp_tag_cloud( 'smallest=8&largest=22' ); ?></p>
           <?php
       
 			if ( have_posts() ) : while ( have_posts() ) : the_post();

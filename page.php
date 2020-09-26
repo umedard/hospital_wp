@@ -8,6 +8,7 @@
     <div class="wrapper wrapper__main">
       <div <?php post_class( 'wrapper__body'); ?>>
           <p><?php the_tags(); ?></p>
+       
           <?php
       
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
