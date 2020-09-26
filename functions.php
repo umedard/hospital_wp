@@ -164,7 +164,7 @@ add_action('widgets_init', 'multiple_widget_init');
 
 /**  
  * 
- * creates a new widget
+ * creates a new widgets
  * 
  */ 
 
@@ -192,12 +192,10 @@ class HW_Widget extends WP_Widget {
     public function widget( $args, $instance ) {
         extract( $args );
         $title = apply_filters( 'widget_title', $instance['title'] );
-        $title = apply_filters( 'widget_title', $instance['content'] );
  
         echo $before_widget;
         if ( ! empty( $title ) ) {
             echo $before_title . $title . $after_title;
-            echo $before_widget . $title . $after_widget;
         }
         echo __( 'Hello, World!', 'text_domain' );
         echo $after_widget;
@@ -316,5 +314,7 @@ function custom_taxonomy() {
 
 }
 add_action( 'init', 'custom_taxonomy', 0 );
+
+
 
 ?>

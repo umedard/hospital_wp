@@ -7,7 +7,12 @@
                     echo "Wyniki wyszukiwania";
                  } elseif (is_home()) {
                     echo "Szpital Uniwersytecki w Krakowie";
-                 }  else {
+                 } elseif (is_tag()) {
+                    single_tag_title( __( 'Kategoria: ', 'textdomain' ) );
+                 } 
+                  elseif (is_category()) {
+                     echo "Aktualności";
+                  } else {
                     the_title();
                  } 
 
