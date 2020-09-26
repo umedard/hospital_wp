@@ -6,8 +6,8 @@
      <?php get_template_part( 'template-parts/banner', 'page' ); ?>
 
     <div class="wrapper wrapper__main">
-      <div class="wrapper__body">
-          
+      <div class="wrapper__body ">
+          <?php the_category( '> ' ); ?>
           <?php
       
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
