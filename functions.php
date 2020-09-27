@@ -315,39 +315,55 @@ function custom_taxonomy() {
 }
 add_action( 'init', 'custom_taxonomy', 0 );
 
-function custom_callback() {
-  echo "Hello world!";
+// function custom_callback() {
+//   echo "Hello world!";
 
-}
+// }
 
-add_action('init', 'custom_callback');
+// add_action('init', 'custom_callback');
 
 
 add_theme_support(
     'editor-color-palette',
     array(
         array(
-            'name'  => __( 'Dark Gray', 'twentynineteen' ),
+            'name'  => __( 'Dark Gray', 'medard' ),
             'slug'  => 'dark-gray',
             'color' => '#111',
         ),
         array(
-            'name'  => __( 'Light Gray', 'twentynineteen' ),
+            'name'  => __( 'Light Gray', 'medard' ),
             'slug'  => 'light-gray',
             'color' => '#767676',
         ),
         array(
-            'name'  => __( 'White', 'twentynineteen' ),
+            'name'  => __( 'White', 'medard' ),
             'slug'  => 'white',
             'color' => '#FFF',
         ),
         array(
-            'name'  => __( 'Red', 'twentynineteen' ),
+            'name'  => __( 'Red', 'medard' ),
             'slug'  => 'red',
             'color' => '#b71e3f',
+        ),
+        array(
+            'name'  => __( 'Gold', 'medard' ),
+            'slug'  => 'gold',
+            'color' => '#a17f48',
         ),
     )
 );
 
+add_theme_support( 'disable-custom-colors' );
+add_theme_support('html5', ['script', 'style']);
+
+add_action( 'after_setup_theme', 'medard_gutenberg_css' );
+ 
+function medard_gutenberg_css(){
+ 
+	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
+	add_editor_style( 'style-editor.css' ); // tries to include style-editor.css directly from your theme folder
+ 
+}
 
 ?>

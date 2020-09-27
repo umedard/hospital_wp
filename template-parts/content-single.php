@@ -15,9 +15,7 @@ $value = get_field( "owoce" );
 
 if( $value ) {
     echo $value;
-} else {
-    echo 'empty';
-}
+};
 
 
 ?>
