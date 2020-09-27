@@ -315,6 +315,39 @@ function custom_taxonomy() {
 }
 add_action( 'init', 'custom_taxonomy', 0 );
 
+function custom_callback() {
+  echo "Hello world!";
+
+}
+
+add_action('init', 'custom_callback');
+
+
+add_theme_support(
+    'editor-color-palette',
+    array(
+        array(
+            'name'  => __( 'Dark Gray', 'twentynineteen' ),
+            'slug'  => 'dark-gray',
+            'color' => '#111',
+        ),
+        array(
+            'name'  => __( 'Light Gray', 'twentynineteen' ),
+            'slug'  => 'light-gray',
+            'color' => '#767676',
+        ),
+        array(
+            'name'  => __( 'White', 'twentynineteen' ),
+            'slug'  => 'white',
+            'color' => '#FFF',
+        ),
+        array(
+            'name'  => __( 'Red', 'twentynineteen' ),
+            'slug'  => 'red',
+            'color' => '#b71e3f',
+        ),
+    )
+);
 
 
 ?>
