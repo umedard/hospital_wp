@@ -366,9 +366,32 @@ function register_my_setting() {
             'default' => NULL,
             );
     register_setting( 'my_options_group', 'my_option_name', $args ); 
+
+    add_settings_field(
+        'wpdevref_removestyles_field',
+        esc_attr__('Remove Plugin Styles', 'wpdevref'),
+        'wpdevref_removestyles_field_cb',
+        'wpdevref_options',
+        'wpdevref_options_section',
+        array( 
+            'type'         => 'checkbox',
+            'option_group' => 'wpdevref_options', 
+            'name'         => 'wpdevref_removestyles_field',
+            'label_for'    => 'wpdevref_removestyles_field',
+            'value'        => (empty(get_option('wpdevref_options')['wpdevref_removestyles_field']))
+            ? 0 : get_option('unitizr_options')['wpdevref_removestyles_field'],
+            'description'  => __( 'Check to remove preset plugin overrides.', 
+                            'wpdevref' ),
+            'checked'      => (!isset(get_option('wpdevref_options')['wpdevref_removestyles_field']))
+                               ? 0 : get_option('wpdevref_options')['wpdevref_removestyles_field'],
+            // Used 0 in this case but will still return Boolean not[see notes below] 
+            'tip'          => esc_attr__( 'Use if plugin fields drastically changed when installing this plugin.', 'wpdevref' ) 
+            )
+    );
 } 
 add_action( 'admin_init', 'register_my_setting' );
 
+// add option for 404.php
 function wpdocs_register_my_setting() {
     add_option( 'medard_option', '255', '', 'yes' );
 } 
