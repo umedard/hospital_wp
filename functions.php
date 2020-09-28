@@ -1,5 +1,20 @@
 <?php 
 
+function theme_setup() {
+    load_theme_textdomain( 'myfirsttheme', get_template_directory() . '/languages' );
+    add_theme_support( 'automatic-feed-links' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
+    add_theme_support( 'disable-custom-colors' );
+    add_theme_support('html5', ['script', 'style']);
+    // editor styles
+    add_theme_support( 'editor-styles' ); 
+    add_editor_style( 'style-editor.css' ); 
+    add_editor_style( 'https://fonts.googleapis.com/css?family=Roboto+Slab' );
+}
+
+add_action( 'after_setup_theme', 'theme_setup' );
+
 function wpb_custom_new_menu() {
   register_nav_menus(
     array(
@@ -51,9 +66,7 @@ function wpdocs_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
-// support thumbnails
 
-add_theme_support( 'post-thumbnails' );
 
 
 // import google fonts
@@ -116,8 +129,6 @@ function medard_book_init() {
 add_action( 'init', 'wpshout_add_taxonomies_to_books' );
 function wpshout_add_taxonomies_to_books() {
 	register_taxonomy_for_object_type( 'category', 'book' );
-	// register_taxonomy_for_object_type( 'difficulty', 'book' );
-	// register_taxonomy_for_object_type( 'post_tag', 'book' );
 }
  
 
@@ -315,13 +326,6 @@ function custom_taxonomy() {
 }
 add_action( 'init', 'custom_taxonomy', 0 );
 
-// function custom_callback() {
-//   echo "Hello world!";
-
-// }
-
-// add_action('init', 'custom_callback');
-
 
 add_theme_support(
     'editor-color-palette',
@@ -354,17 +358,20 @@ add_theme_support(
     )
 );
 
-add_theme_support( 'disable-custom-colors' );
-add_theme_support('html5', ['script', 'style']);
 
-add_action( 'after_setup_theme', 'medard_gutenberg_css' );
- 
-function medard_gutenberg_css(){
- 
-	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
-  add_editor_style( 'style-editor.css' ); // tries to include style-editor.css directly from your theme folder
-  add_editor_style( 'https://fonts.googleapis.com/css?family=Roboto+Slab' );
- 
-}
+function register_my_setting() {
+    $args = array(
+            'type' => 'string', 
+            'sanitize_callback' => 'sanitize_text_field',
+            'default' => NULL,
+            );
+    register_setting( 'my_options_group', 'my_option_name', $args ); 
+} 
+add_action( 'admin_init', 'register_my_setting' );
+
+function wpdocs_register_my_setting() {
+    add_option( 'medard_option', '255', '', 'yes' );
+} 
+add_action( 'admin_init', 'wpdocs_register_my_setting' );
 
 ?>

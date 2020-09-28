@@ -1109,8 +1109,10 @@ div.nav-mobile .children .children {
 
 .errorpage {
   display: flex;
+  flex-flow: nowrap column;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 150px;
   width: 100%;
+  gap: 30px;
 }

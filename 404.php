@@ -8,6 +8,8 @@
     <div class="wrapper wrapper__main">
         <div class="errorpage">
                <p>Błąd. Nie znaleziono takiej strony.</p>
+               <?php get_search_form(); ?>
+               <h1><?php echo get_option( 'medard_option' ); ?></h1>
         </div>
      
      
