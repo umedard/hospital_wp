@@ -1089,3 +1089,28 @@ div.nav-mobile .children .children {
     min-width: 200px;
   }
 }
+/* post text colors */
+
+.has-red-color {
+  color: var(--main-red);
+}
+
+.has-dark-gray-color {
+  color: #111;
+}
+
+.has-gold-color {
+  color: var(--golden-color);
+}
+
+.has-white-color {
+  color: #fff;
+}
+
+.errorpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
