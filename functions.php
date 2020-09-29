@@ -397,4 +397,31 @@ function wpdocs_register_my_setting() {
 } 
 add_action( 'admin_init', 'wpdocs_register_my_setting' );
 
+$header_info = array(
+    'width'         => 100,
+    'height'        => 60,
+    'default-image' => get_template_directory_uri() . '/assets/images/doctors.jpeg',
+);
+add_theme_support( 'custom-header', $header_info );
+ 
+$header_images = array(
+    'sunset' => array(
+            'url'           => get_template_directory_uri() . '/images/sunset.jpg',
+            'thumbnail_url' => get_template_directory_uri() . '/images/sunset_thumbnail.jpg',
+            'description'   => 'Sunset',
+    ),
+    'flower' => array(
+            'url'           => get_template_directory_uri() . '/images/flower.jpg',
+            'thumbnail_url' => get_template_directory_uri() . '/images/flower_thumbnail.jpg',
+            'description'   => 'Flower',
+    ),  
+);
+register_default_headers( $header_images );
+
+
+function themename_post_formats_setup() {
+ add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+}
+add_action( 'after_setup_theme', 'themename_post_formats_setup' );
+
 ?>
