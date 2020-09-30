@@ -19,6 +19,7 @@
 </div>
 
     <div class="topbar container">
+      <img alt="" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>">
       <div class="topbar__logo" id="logo">
         <a class="topbar__url" href="<?php echo home_url(); ?>"></a>
       </div>
