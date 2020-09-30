@@ -397,4 +397,14 @@ function wpdocs_register_my_setting() {
 } 
 add_action( 'admin_init', 'wpdocs_register_my_setting' );
 
+
+function the_login_message( $message ) {
+    if ( empty($message) ){
+        return "<p>Welcome to this site. Please log in to continue. Salut!</p>";
+    } else {
+        return $message;
+    }
+}
+add_filter( 'login_message', 'the_login_message' );
+
 ?>

@@ -529,10 +529,59 @@ div.nav-menu .children .children {
   background: #f5f5f5;
 }
 
+/*                                    blog post                        */
+
 .blog-post {
   /* margin-top: 25px; */
   position: relative;
 }
+
+.archive .blog-post,
+.search .blog-post {
+  padding: 0 0 30px 0;
+}
+
+.post__title {
+  color: var(--golden-color);
+  font-size: 2.5rem;
+}
+
+.post__header {
+  margin-bottom: 20px;
+}
+
+.post__header a {
+  text-decoration: none;
+  color: black;
+}
+
+.post p,
+.search p,
+.page p {
+  margin-top: 20px 0;
+}
+
+.has-huge-font-size,
+.has-large-font-size,
+.has-medium-font-size {
+  color: var(--main-red);
+}
+
+.has-large-font-size {
+  font-size: 1.3rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.has-medium-font-size {
+  font-size: 1.1rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/*                                    page banner                    */
 
 .pagebanner {
   margin-top: 61px;
@@ -610,12 +659,6 @@ div.nav-menu .children .children {
 
 .wrapper__text {
   flex: 3;
-}
-
-.has-huge-font-size,
-.has-large-font-size,
-.has-medium-font-size {
-  color: #b7313f;
 }
 
 p::selection,
@@ -806,8 +849,8 @@ div.nav-mobile .children .children {
 }
 
 /* post content */
-.post p {
-  padding: 2px 0;
+.blog-post p {
+  padding: 20px 0;
 }
 
 .post__link {
@@ -879,7 +922,7 @@ div.nav-mobile .children .children {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: top left;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   border: 1px solid white;
@@ -1076,6 +1119,11 @@ div.nav-mobile .children .children {
   .homenews__content {
     width: 100%;
   }
+
+  .homenews__img {
+    height: 250px;
+    object-position: center center;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1089,6 +1137,7 @@ div.nav-mobile .children .children {
     min-width: 200px;
   }
 }
+
 /* post text colors */
 
 .has-red-color {
