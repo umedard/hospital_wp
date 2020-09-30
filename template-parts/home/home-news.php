@@ -1,4 +1,4 @@
-<ul class="homenews">
+<div class="homenews">
     <!-- first loop -->
 <?php
 
@@ -77,5 +77,5 @@ wp_reset_postdata();
     ?>
 </div>
 
-<ul>
+<div>
 

@@ -1,25 +1,22 @@
 <div class="blog-post">
-
-<?php 
+    <div class="post__header">
+            <?php 
+                the_title('<h1 class="post__title">', '</h1>');
+                // if(has_tag()) {
+                //     the_tags( 'Tagi: ', ', ', '<br />');
+                // } 
+            ?>
+    </div>
+<?php
 
 the_content();
 
+// $value = get_field( "owoce" );
 
-
-?>
-<div class="afc">
-
-<?php
-
-$value = get_field( "owoce" );
-
-if( $value ) {
-    echo $value;
-};
-
+// if( $value ) {
+//     echo $value;
+// };
 
 ?>
-
-</div>
 
 </div>
